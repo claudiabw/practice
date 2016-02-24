@@ -14,18 +14,12 @@ string = raw_input("Enter a phrase to translate: ")
 
 output = ""
 
-# fix determining if it's morse or english
-if re.match('\-', string) != None:
+if ('-' in string) or ('.' in string):
 	for s in string.split(" "):
 		output += str(decode(s))
 
-#if string.isalnum():
 else:
 	for s in string.upper():
 		output += encode(s) + " "
-
-#else:
-#	for s in string.split(" "):
-#		output += str(decode(s))
 
 print output
