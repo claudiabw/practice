@@ -14,6 +14,5 @@ for line in f:
 	w = ints[1]
 	h = ints[2]
 	total += 2 * (l*w + w*h + l*h) + min(l*w, w*h, l*h)
-	print total
 
 print total
